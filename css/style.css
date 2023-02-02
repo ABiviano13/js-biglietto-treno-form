@@ -1,13 +1,10 @@
-body{
-    background-color: rgb(195, 131, 255);
-}
-
 .container{
     max-width: 1770px;
     margin: 0 auto;
 }
 
 .card-generator{
+    background-color: rgb(195, 131, 255);
     border: 2px solid black;
     padding: 20px 0;
     margin: 20px;
