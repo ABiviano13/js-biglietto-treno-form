@@ -1,18 +1,20 @@
 
 // 1. Definiamo le variabili km (input)
-let km = document.getElementById('km')
+const km = document.getElementById('km');
 console.log (km);
 
-  // - Definiamo il prezzo al kilometro (0,21 al kilometro)
-// const priceKm = '0,21';
-// parseInt(priceKm);
-// console.log (priceKm);
+const priceKm = 0.21;
+console.log (priceKm);
 
 // 2. Definiamo le variabili age (input)
-let age = document.getElementById('age')
+const age = document.getElementById('age');
 console.log(age);
 
-// 3. Definiamo la variabile del bottone  
+// 3. Definiamo la variabile prezzo totale
+const resultPrice = document.getElementById('pricetotal');
+console.log(resultPrice);
+
+// 4. Definiamo la variabile del bottone  
 const formbutton = document.querySelector(
     '.card-generator input[type="button"]'
 );
@@ -20,38 +22,30 @@ console.log(formbutton);
 
   // - Al click sul pulsante si deve generare il prezzo totale
 formbutton.addEventListener('click', function () {
-    km = km.value;
-    parseInt(km);
+    let kmValue = km.value;
+    kmValue = parseFloat(kmValue);
 
-    let priceKm = '0,21';
-    parseFloat(priceKm)
-    console.log (priceKm);
+    let priceBasis = kmValue * priceKm;
 
-    const priceBasis = km * priceKm;
-    parseInt(priceBasis);
-
-    const minorsDiscout = priceBasis * (20 / 100);
-    const elderlyDiscout = priceBasis * (40 / 100);
-    parseInt(minorsDiscout, elderlyDiscout);
-    console.log(km, priceBasis, minorsDiscout, elderlyDiscout);
+    console.log(kmValue, priceBasis);
 
     let priceTotal = age.value;
 
     switch (priceTotal) {
         case 'minors':
+            let minorsDiscout = priceBasis * 20 / 100;
             priceTotal = priceBasis - minorsDiscout;
             break
         case 'adults':
             priceTotal = priceBasis;   
             break 
         case 'elderly':
+            let elderlyDiscout = priceBasis * 40 / 100;
             priceTotal = priceBasis - elderlyDiscout; 
             break   
-    }
-    console.log(priceTotal)
-})
-// 4. Stampiamo tutto sul nostro file html
+    };
+    console.log(priceTotal);
 
-
-
-// const priceBasis = km * priceKm;
+    resultPrice.innerHTML = priceTotal;
+});
+// 5. Stampiamo tutto sul nostro file html
