@@ -42,6 +42,10 @@
     font-size: 30px;
 }
 
+.logo i{
+    padding: 5px;
+}
+
 #firstname-lastname::-webkit-input-placeholder,
 #km::-webkit-input-placeholder{
     color: var(--purple--);
