@@ -4,40 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b59a747f9a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>Ticket Generator</title>
 </head>
 <body>
 
     <div class="container">
-        <div class="card-generator">
+        <div class="card card-generator">
             <div class="card-input">
                 Nome e Cognome
-                <input type="text" name="firstname-lastname" placeholder="Inserisci qui nome e cognome">
+                <input type="text" name="firstname-lastname" id="firstname-lastname" placeholder="Inserisci qui">
             </div>
             <div class="card-input">
                 Kilometri che desideri percorrere
-                <input type="text" name="km" id="km" placeholder="Inserisci qui i km">
+                <input type="text" name="km" id="km" placeholder="Inserisci qui ">
             </div>
             <div class="card-input">
+                Seleziona una di queste categorie
                 <select name="age" id="age">
-                    <option value="minors" id="minors">
+                    <option value="minorenne" id="minors">
                         Minorenne
                     </option>
-                    <option value="adults" id="adults">
+                    <option value="maggiorenne" id="adults">
                         Maggiorenne
                     </option>
-                    <option value="elderly" id="elderly">
+                    <option value="over65" id="elderly">
                         Over 65
                     </option>
                 </select>
             </div>
             <div class="card-input">
-                <input type="button" value="genera">
+                Genera il tuo biglietto
+                <input type="button" value="genera" class="button">
             </div>
         </div>
-        <div id="pricetotal">
-            Prezzo totale
+        <div class="card card-generator card-generator-ticket">
+            <div class="logo">
+                <i class="fa-solid fa-train-subway"></i>
+                <span class="text-logo">
+                    Benvenut* 
+                    <span id="input-result-name">
+                        <i class="fa-solid fa-train-subway"></i>
+                    </span>
+                </span>
+            </div>
+            <div class="card card-ticket">
+                <div class="card-input card-name">
+                    Nome e cognome
+                    <div id="input-result-name2">
+                        qui
+                    </div>
+                </div>
+                <div class="card-input card-km">
+                    Km da percorrere
+                    <div id="input-result-km">
+                        qui
+                    </div>
+                </div>
+                <div class="card-input card-age">
+                    Categoria Età
+                    <div id="input-result-age">
+                        qui
+                    </div>
+                </div>
+                <div class="card-input card-price">
+                    Codice CP
+                    <div id="codicecp">
+                        qui
+                    </div>
+                </div>
+                <div class="card-input card-price">
+                    Prezzo totale
+                    <div id="pricetotal">
+                        qui
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     

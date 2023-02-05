@@ -1,22 +1,59 @@
+:root{
+    --purple--: rgb(195, 131, 255);
+}
+
 .container{
     max-width: 1770px;
     margin: 0 auto;
 }
 
-.card-generator{
-    background-color: rgb(195, 131, 255);
-    border: 2px solid black;
+.card{
+    border-radius: 10px;
     padding: 20px 0;
     margin: 20px;
     display: flex;
     gap: 10px;
     justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card-generator{
+    background-color: var(--purple--);
+    color: white;
+    border: 2px solid lightgray;
 }
 
 .card-input{
-    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
+}
+
+.card-ticket{
+    background-color: white;
+    color: var(--purple--); 
+    width: 100%;
+}
+
+.logo{
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+
+#firstname-lastname::-webkit-input-placeholder,
+#km::-webkit-input-placeholder{
+    color: var(--purple--);
+}
+
+.button,
+ #age,
+ #firstname-lastname,
+ #km{
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    background-color: white;
+    color: var(--purple--)
 }
